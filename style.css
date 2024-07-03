@@ -1,0 +1,11 @@
+.texto03{
+    color:darkolivegreen;
+    font-style: italic;
+    font-size: x-large;
+    margin: 100px;
+}
+
+b:hover{
+    background-color: yellow;
+    color: black;
+}
