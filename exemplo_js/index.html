@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // aqui é um comentário de uma linha!
+        /* trecho de código */
+        console.log("Olá Mundo!!! To aprendendo JS!")
+   
+        function nome_funcao(){
+            var num1 = 10;
+            //
+        }
+
+        function soma(v1,v2,v3){
+            return v1+v2+v3;
+        }
+        
+        function exibeMsg(id, valor){
+            document.getElementById(id)
+                .innerHTML = valor;
+        }
+
+       // var resultadoSoma = soma(20,10,5);
+       // exibeMsg('resultado', resultadoSoma);
+
+   </script>
+
+    <p id="paragrafo"> Qualquer coisa a mesma coisa!</p>
+    
+    <button onclick="document.
+        getElementById('paragrafo')
+        .innerHTML= 'Olá mundo JS'">Clique aqui</button>
+
+    <button onclick="exibeMsg('resultado',soma(20,10,5))">Calcular</button>
+    <p id="resultado"></p>
+</body>
+</html>
