@@ -14,6 +14,7 @@
         var elementoP = document.getElementById("texto");
         elementoP.innerHTML = "Paragrafo 01";
       }
+
       function texto02() {
         var elementoH1 = document.getElementById("subtitulo");
         elementoH1.innerHTML = "Titulo 02";
@@ -24,38 +25,20 @@
         alert("Botão 02");
       }
 
-      function formulario() {
-        //e.preventDefault();
+      function formulario(event) {
+        event.preventDefault(); // Impede limpar os dados da div
+
         var nome = document.getElementById("nome").value;
         var idade = document.getElementById("idade").value;
         var idade02 = document.getElementById("idade02").value;
 
         var resultado = document.getElementById("resultado");
+
+        resultado.innerHTML = nome + " - " + idade + " - " + idade02;
+
         alert(nome + " - " + idade + " - " + idade02);
         console.log(nome + " - " + idade);
-
-        /*
-          form.addEventListener('submit', function(event){
-              event.preventDefault();
-
-              resultado.textContent = nome + " - " + idade;
-          });
-          */
       }
-      /*
-      document
-        .getElementById("submit-btn")
-        .addEventListener("click", function (event) {
-          event.preventDefault();
-
-          var nome = document.getElementById("nome").value;
-          var idade = document.getElementById("idade").value;
-
-          var resultado = document.getElementById("resultado");
-          alert(nome + " - " + idade);
-          console.log(nome + " - " + idade);
-        });
-        */
     </script>
   </head>
   <body>
@@ -78,7 +61,7 @@
         <label for="">Idade 02</label>
         <input type="text" name="idade02" id="idade02" /><br />
 
-        <button type="submit" onclick="formulario()">Enviar</button>
+        <button type="submit" onclick="formulario(event)">Enviar</button>
 
         <div id="resultado"></div>
       </form>
