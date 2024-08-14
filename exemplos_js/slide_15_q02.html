@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function salvar(event){
+
+            event.preventDefault();
+
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var telefone = document.getElementById('telefone').value;
+
+            if(!nome || !email || !telefone){
+                alert("Informe um nome ou email ou telefone!");
+
+            } else {
+
+                var pessoa = {
+                    nome: nome,
+                    email: email,
+                    telefone: telefone
+                }
+
+                var tabela = document.getElementById('tb_pessoa')
+                                .getElementsByTagName('tbody')[0];
+                var novaLinha = tabela.insertRow();
+
+                var celulaNome = novaLinha.insertCell(0);
+                var celulaEmail = novaLinha.insertCell(1);
+                var celulaTelefone = novaLinha.insertCell(2);
+
+                celulaNome.textContent = pessoa.nome;
+                celulaEmail.textContent = pessoa.email;
+                celulaTelefone.textContent = pessoa.telefone;
+
+                document.getElementById('formPessoa').reset();
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="formPessoa" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome"><br>
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email"><br>
+
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" id="telefone"><br>
+
+        <button type="submit" onclick="salvar(event)">Salvar</button>
+
+    </form>
+
+    <table id="tb_pessoa">
+        <thead> <!-- Cabeçalhos -->
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>

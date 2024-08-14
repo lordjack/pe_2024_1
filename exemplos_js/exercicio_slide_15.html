@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function btn01() {
+            document.body.style.backgroundColor = "red";
+        }
+
+        function btn02() {
+            document.body.style.backgroundColor = "blue";
+        }
+
+        function btn03() {
+            document.body.style.backgroundColor = "green";
+            document.getElementById('resultado').innerText = 0;
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+        Exercício 1: Trocar Cor de Fundo 
+Crie uma página com três botões, cada um com uma cor diferente (vermelho, azul, verde). Ao clicar em 
+um dos botões, a cor de fundo da página deve mudar para a cor correspondente ao botão. 
+    -->
+
+    <button id="btnVermelho" onclick="btn01()">Botão 01 - Vermelho</button>
+    <button id="btnAzul" onclick="btn02()">Botão 02 - Azul</button>
+    <button id="btnVerde" onclick="btn03()">Botão 03 - Verde</button>
+    <div id="resultado"></div>
+</body>
+</html>
